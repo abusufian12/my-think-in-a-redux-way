@@ -1,28 +1,38 @@
+npm install --save react-redux
+
+
+
+
 [![Youtube][youtube-shield]][youtube-url]
 [![Facebook][facebook-shield]][facebook-group-url]
 
 <!-- PROJECT LOGO -->
 <br />
- <p align="center">
+<p align="center">
     <img src="https://avatars.githubusercontent.com/u/73503432?v=4" alt="Logo" width="80" height="80" />
-    <h3 align="center "><a href="https://learnwithsumit.com/courses/think-in-a-redux-way/reactive-ui-and-reusability" target="_blank" >THINK IN A REDUX WAY - MODULE 1 - LESSON 2</a></h3>
+    <h3 align="center"><a href="https://learnwithsumit.com/courses/think-in-a-redux-way/project-and-server-setup">THINK IN A REDUX WAY - MODULE 8 - LESSON 2 </a></h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
 
 ## ![tableOfContent][tableofcontent-shield] Table of Contents
 
-| HTML TEMPLATE                            | CODE RUN                   | CONTACT                    |
-| ---------------------------------------- | -------------------------- | -------------------------- |
-| [Get HTML template](#-get-html-template) | [How to run](#-how-to-run) | [Contact us](#-contact-us) |
+| HTML TEMPLATE                            | SERVER TEMPLATE                              | CODE RUN                   | CONTACT                    |
+| ---------------------------------------- | -------------------------------------------- | -------------------------- | -------------------------- |
+| [Get HTML template](#-get-html-template) | [Get SERVER template](#-get-server-template) | [How to run](#-how-to-run) | [Contact us](#-contact-us) |
 
 <br>
-
 <!-- GET HTML TEMPLATE -->
 
 ## ![htmlIcon][htmlicon-shield] Get HTML Template
 
-You can find the raw HTML template of the counter application from the "html_template" folder.
+You can find the raw HTML template of the RTK Query - video gallery application from the "html_template" folder.
+
+<!-- GET SERVER TEMPLATE -->
+
+## ![serverIcon][servericon-shield] Get SERVER Template
+
+You can find the raw SERVER template of the RTK Query - video gallery application from the "server" folder.
 
 <!-- HOW TO RUN -->
 
@@ -40,11 +50,36 @@ Please follow the below instructions to run this branch in your machine:
    ```sh
    cd think-in-a-redux-way
    ```
-4. Checkout/switch to branch 1.1
+4. Checkout/switch to branch 8.2
    ```sh
-   git checkout 1.1
+   git checkout 8.2
    ```
-5. Just run the index.html file with Visual Studio Code [Live Server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+5. Install dependencies
+   ```sh
+   npm i
+   ```
+6. Install VS Code [Live Server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) & start the server.
+   ```sh
+   npm start
+   ```
+7. Your app should be available in http://localhost:3000
+
+<br>
+
+Please follow the below instructions to run server in your machine:
+
+1. Go to the server directory
+   ```sh
+   cd server
+   ```
+2. Install dependencies
+   ```sh
+   npm i
+   ```
+3. Start the server
+   ```sh
+   npm start
+   ```
 
 <br>
 
@@ -73,5 +108,6 @@ Please follow the below instructions to run this branch in your machine:
 [mail-url]: mailto:support@learnwithsumit.com
 [tableofcontent-shield]: https://img.icons8.com/external-flatart-icons-flat-flatarticons/28/undefined/external-direction-business-and-teamwork-flatart-icons-flat-flatarticons.png
 [htmlicon-shield]: https://img.icons8.com/external-flaticons-flat-flat-icons/28/undefined/external-html-computer-programming-flaticons-flat-flat-icons.png
+[servericon-shield]: https://img.icons8.com/external-itim2101-flat-itim2101/28/undefined/external-server-network-technology-itim2101-flat-itim2101-2.png
 [rocketicon-shield]: https://img.icons8.com/arcade/30/undefined/experimental-rocket-arcade.png
 [contacticon-shield]: https://img.icons8.com/external-flaticons-lineal-color-flat-icons/28/undefined/external-support-communication-media-flaticons-lineal-color-flat-icons.png
