@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "[![Youtube][youtube-shield]][youtube-url]\r [![Facebook][facebook-shield]][facebook-group-url]",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/abusufian12/my-think-in-a-redux-way/issues"
   },
-  "homepage": "https://github.com/abusufian12/my-think-in-a-redux-way#readme"
+  "homepage": "https://github.com/abusufian12/my-think-in-a-redux-way#readme",
+  "dependencies": {
+    "react-redux": "^8.0.5"
+  }
 }
