@@ -12,18 +12,21 @@ export const apiSlice = createApi({
             keepUnusedDataFor: 600,
             providesTags: ["Videos"],
         }),
-        getvideo: builder.query({
+        getVideo: builder.query({
             query: (videoId) => `/videos/${videoId}`,
             keepUnusedDataFor: 600,
             providesTags: (result, error, arg) => [{type: "Videos", id: arg}]
         }),
-        getrelatedVideos: builder.query({
+        getRelatedVideos: builder.query({
             query: ({id, title}) => {
                 const tags = title.splite(" ");
                 const likes = tags.map((tag) => `title_like=${tag}`);
                 const queryString = `/videos?${likes.join("&")}&_limit=4`;
                 return queryString;
-            }
+            },
+            providesTags:(result, error, arg) => [
+                {type: "RelatedVideos", id: arg.id},
+            ],
         }),
         addVideo: builder.mutation({
             query: (data) => ({
@@ -57,8 +60,8 @@ export const apiSlice = createApi({
 
 export const { 
     useGetVideosQuery,
-    useGetvideoQuery,
-    useGetrelatedVideosQuery,
+    useGetVideoQuery,
+    useGetRelatedVideosQuery,
     useAddVideoMutation,
     useEditVideoMutation,
     useDeleteVideoMutation, 

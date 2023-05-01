@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useGetvideoQuery } from "../../features/api/apiSlice";
+import { useGetVideoQuery } from "../../features/api/apiSlice";
 import Error from "../ui/Error";
 import DescriptionLoader from "../ui/loaders/DescriptionLoader";
 import PlayerLoader from "../ui/loaders/PlayerLoader";
@@ -9,11 +9,11 @@ import Player from "../video/Player";
 import RelatedVideos from "../video/related/RelatedVideos";
 
 export default function Video() {
-    const {videoId} = useParams();
-    const {data: video, isLoading, isError} = useGetvideoQuery(videoId);
-    console.log("sufian");
+    const { videoId } = useParams();
+    const { data: video, isLoading, isError } = useGetVideoQuery(videoId);
+
     let content = null;
-    if(isLoading){
+    if (isLoading) {
         content = (
             <>
                 <PlayerLoader />
@@ -32,8 +32,7 @@ export default function Video() {
                 <Player link={video.link} title={video.title} />
                 <Description video={video} />
             </>
-        )
-        
+        );
     }
 
     return (
@@ -44,7 +43,17 @@ export default function Video() {
                         {content}
                     </div>
 
-                    {/* <RelatedVideos /> */}
+                    {video?.id ? (
+                        <RelatedVideos id={video.id} title={video.title} />
+                    ) : isLoading ? (
+                        <>
+                            <RelatedVideoLoader />
+                            <RelatedVideoLoader />
+                            <RelatedVideoLoader />
+                        </>
+                    ) : (
+                        <Error message="There was an error!" />
+                    )}
                 </div>
             </div>
         </section>
